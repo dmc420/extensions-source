@@ -14,12 +14,8 @@ keiyoushi {
         name = "肉漫屋"
         lang = "zh"
 
-        // 地址: https://rou.pub/dizhi or https://rdz3.xyz/dizhi
-        baseUrl {
-            mirrors(
-                "https://rouman5.com",
-                "https://roum27.xyz",
-            )
-        }
+        // 默认域名，可在应用内设置中自定义 / 切换镜像
+        // 最新地址查询: https://rou.pub/dizhi or https://rdz3.xyz/dizhi
+        baseUrl = "https://rouman5.com"
     }
 }

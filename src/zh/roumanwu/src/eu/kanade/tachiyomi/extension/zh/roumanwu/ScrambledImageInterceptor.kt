@@ -18,7 +18,7 @@ class ScrambledImageInterceptor : Interceptor {
         val response = chain.proceed(request)
         val url = request.url
         if ("sr:1" !in url.pathSegments) return response
-        val image = response.body.use { BitmapFactory.decodeStream(it.byteStream()) }
+        val image = response.body.use { BitmapFactory.decodeStream(it.byteStream()) } ?: return response
         val width = image.width
         val height = image.height
         val result = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
